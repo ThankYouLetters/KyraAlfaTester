@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: repeating-linear-gradient(180deg, rgba(54,54,59, 0.15) 0px, rgba(54,54,59, 0.15) 1px,transparent 10px, transparent 15px),repeating-linear-gradient(275deg, rgba(54,54,59, 0.15) 0px, rgba(54,54,59, 0.15) 1px,transparent 1px, transparent 19px),linear-gradient(180deg, rgba(255,49,206, 0.76),rgba(20,141,20, 0.85));
+    color: #000;
+    font-family: monospace;
+    margin: 0;
+  }
+  
+  /* FULL TEXT ANIMATION */
+  .fulltext-animation {
+    text-align: center;
+    --letter: 0.7s;
+    animation-name: fulltext-animation_kf;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-timing-function: cubic-bezier(0, 0.73, 1.91, 1.42);
+    animation-delay: calc(var(--letter) * 0.3s);
+    animation-fill-mode: both;
+    /* animation-delay: var(--delay); */
+  }
+  
+  .fulltext-animation2 {
+    text-align: center;
+    --letter: 0.7s;
+    animation-name: fulltext-animation_kf;
+    animation-duration: 19.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-timing-function: cubic-bezier(0, 0.73, 1.91, 1.42);
+    animation-delay: calc(var(--letter) * 3.3s);
+    animation-fill-mode: both;
+    /* animation-delay: var(--delay); */
+  }
+  
+  
+  @keyframes fulltext-animation_kf {
+    0% {
+      text-align: center;
+      transform: translate(0, 40px);
+      opacity: 0;
+    }
+    /* 80% {
+      transform: translate(0, -5px);
+    } */
+    100% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+  
+  span {
+    display: inline-block;
+  }
